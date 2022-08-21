@@ -18,3 +18,14 @@ main {
     flex-direction: column;
     
 }
+
+.icon {
+    height: 100px;
+    width:100px;
+    background-repeat: no-repeat;
+}
+
+#uv {
+    color: white;
+    width: 80px;
+}
