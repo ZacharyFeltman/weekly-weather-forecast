@@ -3,11 +3,11 @@ var searchBtn = document.getElementById("search-button");
 
 const WEATHER_API_KEY = "aa84670991614cba942d9086ea82fb79";
 var fiveDayForecastUrl =
-  "http://api.weatherbit.io/v2.0/forecast/daily?key=" +
+  "https://api.weatherbit.io/v2.0/forecast/daily?key=" +
   WEATHER_API_KEY +
   "&units=I&days=6";
 var currentWeatherUrl =
-  "http://api.weatherbit.io/v2.0/current?key=" + WEATHER_API_KEY + "&units=I";
+  "https://api.weatherbit.io/v2.0/current?key=" + WEATHER_API_KEY + "&units=I";
 
 function search(query) {
   let searchHistory = JSON.parse(
@@ -48,7 +48,6 @@ function loadSearchHistory() {
   if (!searchHistory) searchHistory = [];
   let wrapper = document.getElementById("searchHistory");
   wrapper.innerHTML = "";
-  
   for (let i = 1; i <= 5; i++) {
     let searchIndex = searchHistory.length - i;
     if (searchIndex < 0) break;
@@ -66,7 +65,7 @@ function updateFiveDayForecast(data) {
     let date = moment().add(i, "days").format("L");
     document.getElementById("day" + i + "_date").textContent = date;
     document.getElementById("day" + i + "_icon").style =
-      "background: url('http://weatherbit.io/static/img/icons/" +
+      "background: url('https://weatherbit.io/static/img/icons/" +
       data[i].weather.icon +
       ".png');";
     document.getElementById("day" + i + "_temp").textContent =
@@ -83,7 +82,7 @@ function updateDashboard(data) {
   document.getElementById("city").textContent = data.city_name;
   document.getElementById("date").textContent = now;
   document.getElementById("icon").style =
-    "background: url('http://weatherbit.io/static/img/icons/" +
+    "background: url('https://weatherbit.io/static/img/icons/" +
     data.weather.icon +
     ".png');";
   document.getElementById("temp").textContent = data.temp + "\u00B0F";
