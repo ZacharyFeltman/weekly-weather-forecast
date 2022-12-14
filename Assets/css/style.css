@@ -42,6 +42,18 @@ main {
     justify-content: space-between;
 }
 
+.currentWeather {
+    display: flex;
+}
+
+.mainInfo {
+    width: 75%;
+}
+
+.secondaryInfo {
+    width: 25%;
+}
+
 
 .fiveDayForecast {
     display: flex;
