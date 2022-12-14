@@ -29,3 +29,22 @@ main {
     color: white;
     width: 80px;
 }
+
+.searchFiveDay {
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, blue, red);
+}
+
+#searchHistory {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fiveDayForecast {
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(to right, blue, red);
+}
